@@ -35,11 +35,15 @@ function syt(p, q) {
 console.log(syt(48, 18));
 console.log(syt(35, 18));
 
-function potenssiinKorotus(p, q) {
+function potenssiinKorotus(p, q,sum) {
+  if (sum==null){
+    sum=p;
+  }
   if (q === 0) {
-    return 1;
+    return tulos+1;
   } else {
-    return p * potenssiinKorotus(p, q - 1);
+    sum*=p;
+    return potenssiinKorotus(p, q - 1,sum);
   }
 }
 

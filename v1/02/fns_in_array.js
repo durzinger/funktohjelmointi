@@ -14,6 +14,10 @@ const pipeline  = [   // 2D-muunnoksia
     function scale(p){
         return { x: p.x * zoom, y: p.y * zoom};
     },
+    
+    function rotation(p) {
+        return { x: p.x * Math.cos(Math.PI) - p.y * Math.sin(Math.PI), y: p.x * Math.sin(Math.PI) + p.y * Math.cos(Math.PI)};
+    }
 ];
 
 
