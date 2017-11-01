@@ -1,6 +1,6 @@
 'use strict'
 
-let x = function (a, b) {
+let vertaa = function (a, b) {
     if (a > b) {
         return 1;
     } else if (a < b) {
@@ -10,41 +10,27 @@ let x = function (a, b) {
     }
 }
 
-let tulos = x(4,2);
+let tulos = vertaa(4,2);
 
 console.log(tulos);
 
-var hki2015 = [
-    {month: "tammikuu", asteet: -0.9},
-    {month: "helmikuu", asteet: 0.9},
-    {month: "maaliskuu", asteet: 2.4},
-    {month: "huhtikuu", asteet: 5.3},
-    {month: "toukokuu", asteet: 9.3},
-    {month: "kesäkuu", asteet: 13.3},
-    {month: "heinäkuu", asteet: 16.4},
-    {month: "elokuu", asteet: 17.5},
-    {month: "syyskuu", asteet: 13.7},
-    {month: "lokakuu", asteet: 6.4},
-    {month: "marraskuu", asteet: 5.6},
-    {month: "joulukuu", asteet: 3.3}
-]
-
-var hki2016 = [
-    {month: "tammikuu", asteet: -8.8},
-    {month: "helmikuu", asteet: 0.3},
-    {month: "maaliskuu", asteet: 0.9},
-    {month: "huhtikuu", asteet: 4.8},
-    {month: "toukokuu", asteet: 13.8},
-    {month: "kesäkuu", asteet: 15.3},
-    {month: "heinäkuu", asteet: 17.8},
-    {month: "elokuu", asteet: 16.4},
-    {month: "syyskuu", asteet: 13.3},
-    {month: "lokakuu", asteet: 5.6},
-    {month: "marraskuu", asteet: 0.0},
-    {month: "joulukuu", asteet: 0.2}
-]
+var hki2015 = [ -0.9, 0.9, 2.4, 5.3, 9.3, 13.3, 16.4, 17.5, 13.7, 6.4, 5.6, 3.3];
 
 
-function lämpötila(x(a,b)) {
+var hki2016 = [-8.8, 0.3, 0.9, 4.8, 13.8, 15.3, 17.8, 16.4, 13.3, 5.6, 0.0, 0.2];
+
+
+
+function vertaaLämpötila(vertaa, lista1, lista2) {
+    let sum = 0;
     
+    for (let i = 0; i < lista1.length; i++) {
+        if (vertaa(lista1[i], lista2[i]) == 1) {
+            sum++;
+        }
+    }
+    
+    return sum;
 }
+
+console.log(vertaaLämpötila(vertaa, hki2016, hki2015));
