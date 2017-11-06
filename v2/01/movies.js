@@ -1,4 +1,6 @@
-[ 
+//tehtävät 2 ja 3
+
+var movies = [ 
 		{ 
  			title: 'Harry Potter and the Deathly Hallows: Part 2', 
  			director: 'David Yates', 
@@ -54,5 +56,8 @@
  			director: 'Hayao Miyazaki', 
  			release: 2001 
  		} 
- 	]	 
+ 	];
+ 	
+ console.log(movies.map( x => ({title: x.title, release: x.release}))); 
  
+ console.log(movies.filter(x => x.release > 2011));

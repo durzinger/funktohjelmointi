@@ -10,8 +10,8 @@ var squares = [1, 2, 3].map(function (x) {
 });
 
 // use arrow
-let squares = [1, 2, 3].map(x => x * x);
-console.log(squares);
+let square = [1, 2, 3].map(x => x * x);
+console.log(square);
 
 // insert something with map
 console.log([4, 5, 1].map(x => ( {foo: x} ) ));
