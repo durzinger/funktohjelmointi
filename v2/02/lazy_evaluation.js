@@ -7,9 +7,9 @@ let parittomienNeliot =
     .filter(function(x){console.log(`filter ${x}`) ; return x % 2 })
     .map(function(x){console.log(`map ${x}`); return x * x});
     
-//console.log(`0: ${parittomienNeliot.get(0)}`);        
-//console.log(`1:  ${parittomienNeliot.get(1)}`);    
-//console.log(`2: ${parittomienNeliot.get(2)}`);     
+console.log(`0: ${parittomienNeliot.get(0)}`);        
+console.log(`1:  ${parittomienNeliot.get(1)}`);    
+console.log(`2: ${parittomienNeliot.get(2)}`);     
     
     
 // Sama JavaScriptin taulukolle:
@@ -21,9 +21,9 @@ let parittomienNeliotTaulukko =
     .filter(function(x){console.log(`filter ${x}`) ; return x % 2 })
     .map(function(x){console.log(`map ${x}`); return x * x});
     
-//console.log(`0: ${parittomienNeliot.get(0)}`);        
-//console.log(`1:  ${parittomienNeliotTaulukko[1]}`);    
-//console.log(`2: ${parittomienNeliot.get(2)}`);     
+console.log(`0: ${parittomienNeliot.get(0)}`);        
+console.log(`1:  ${parittomienNeliotTaulukko[1]}`);    
+console.log(`2: ${parittomienNeliot.get(2)}`);     
 
 
     
