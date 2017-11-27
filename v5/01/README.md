@@ -39,7 +39,7 @@ omalla nimelläsi.
 ```
 Tämä testaus käyttää clojure.test-kirjastoa. Muutetaan projekti käyttämään Midje-kirjastoa, jossa testejä kirjoitetaan samaan tyyliin kuin yleensä Clojure-esimerkeissä on tapana. Muuta core_test.clj-tiedoston alkuun
 ```(ns projekti.core-test
-    (:use projekti.core)
+    (:use test-lein.core)
     (:use  midje.sweet))
 ```
 Muuta project.clj-tiedoston sisällöksi
@@ -50,7 +50,7 @@ Muuta project.clj-tiedoston sisällöksi
   	:license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   	:dependencies [[org.clojure/clojure "1.8.0"]]
-  	:main ^:skip-aot projekti.core
+  	:main ^:skip-aot test-lein.core
   	:target-path "target/%s"
   	:profiles {
     	:dev {
